@@ -69,7 +69,8 @@ class Student
   def self.students_below_12th_grade
     #binding.pry
     sql = "SELECT * FROM students WHERE grade IS NOT 12"
-     DB[:conn].execute(sql)
+     DB[:conn].execute(sql).map do |row|
+      self.new_from_db(row)
     
   end 
   
