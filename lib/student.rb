@@ -71,6 +71,7 @@ class Student
     sql = "SELECT * FROM students WHERE grade IS NOT 12"
      DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
+    end
     
   end 
   
