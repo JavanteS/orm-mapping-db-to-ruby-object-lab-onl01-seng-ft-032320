@@ -70,7 +70,7 @@ class Student
     #binding.pry
     sql = "SELECT * FROM students WHERE grade IS NOT 12"
      DB[:conn].execute(sql)
-    end
+    
   end 
   
   def self.first_X_students_in_grade_10(num_students)
